@@ -23,8 +23,11 @@ RCT_EXPORT_VIEW_PROPERTY(animation, NSDictionary) \
 RCT_EXPORT_VIEW_PROPERTY(xAxis, NSDictionary) \
 RCT_EXPORT_VIEW_PROPERTY(marker, NSDictionary) \
 RCT_EXPORT_VIEW_PROPERTY(onSelect, RCTBubblingEventBlock) \
-RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
-
+RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock) \
+RCT_EXPORT_VIEW_PROPERTY(extraLeftOffset, NSNumber) \
+RCT_EXPORT_VIEW_PROPERTY(extraRightOffset, NSNumber) \
+RCT_EXPORT_VIEW_PROPERTY(extraTopOffset, NSNumber) \
+RCT_EXPORT_VIEW_PROPERTY(extraBottomOffset, NSNumber)
 
 
 #endif /* RNChartManagerBridge_h */

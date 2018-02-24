@@ -430,7 +430,19 @@ open class RNChartViewBase: UIView, ChartViewDelegate {
     }
 
     func setExtraLeftOffset(_ offset: NSNumber) {
-        chart.extraLeftOffset = offset.doubleValue
+        chart.extraLeftOffset = CGFloat(offset.floatValue)
+    }
+
+    func setExtraRightOffset(_ offset: NSNumber) {
+        chart.extraRightOffset = CGFloat(offset.floatValue)
+    }
+
+    func setExtraTopOffset(_ offset: NSNumber) {
+        chart.extraTopOffset = CGFloat(offset.floatValue)
+    }
+
+    func setExtraBottomOffset(_ offset: NSNumber) {
+        chart.extraBottomOffset = CGFloat(offset.floatValue)
     }
     
     @objc public func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
