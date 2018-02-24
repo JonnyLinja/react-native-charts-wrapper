@@ -428,6 +428,10 @@ open class RNChartViewBase: UIView, ChartViewDelegate {
         }
         chart.highlightValues(highlights)
     }
+
+    func setExtraLeftOffset(_ offset: NSNumber) {
+        chart.extraLeftOffset = offset.doubleValue
+    }
     
     @objc public func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         
