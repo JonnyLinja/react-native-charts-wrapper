@@ -335,6 +335,14 @@ open class RNChartViewBase: UIView, ChartViewDelegate {
         if config["granularityEnabled"].bool != nil {
             axis.granularityEnabled = config["granularityEnabled"].boolValue
         }
+
+        if config["spaceMax"].double != nil {
+            axis.spaceMax = config["spaceMax"].doubleValue
+        }
+        
+        if config["spaceMin"].double != nil {
+            axis.spaceMin = config["spaceMin"].doubleValue
+        }
         
         if config["labelCount"].int != nil {
             var labelCountForce = false
@@ -427,22 +435,6 @@ open class RNChartViewBase: UIView, ChartViewDelegate {
             }
         }
         chart.highlightValues(highlights)
-    }
-
-    func setExtraLeftOffset(_ offset: NSNumber) {
-        chart.extraLeftOffset = CGFloat(offset.floatValue)
-    }
-
-    func setExtraRightOffset(_ offset: NSNumber) {
-        chart.extraRightOffset = CGFloat(offset.floatValue)
-    }
-
-    func setExtraTopOffset(_ offset: NSNumber) {
-        chart.extraTopOffset = CGFloat(offset.floatValue)
-    }
-
-    func setExtraBottomOffset(_ offset: NSNumber) {
-        chart.extraBottomOffset = CGFloat(offset.floatValue)
     }
     
     @objc public func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
